@@ -42,7 +42,7 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 600px;
 }
 
 .wrapper {
@@ -53,7 +53,7 @@ img {
 
 /* VARIABLES & ASSOCIATED DYNAMIC STYLES */
 :root {
-  --base: #ffc600;
+  --base: #94bb92;
   --spacing: 0px;
   --blur: 0px;
 }
@@ -74,7 +74,7 @@ a {
 
 /* MISC STYLES */
 body {
-  background: linear-gradient(to bottom,  #699fc5,  #236391);
+  background: linear-gradient(to bottom, #877BA4, #625583);
   color: white;
   font-family: 'helvetica neue', sans-serif;
   font-weight: 100;
@@ -95,17 +95,17 @@ a {
   text-transform: uppercase;
   font-size: 1.5rem;
   color: #193549;
-  padding: 7px;
+  padding: 8px;
   transition: all 0.2s linear;
   box-shadow: 0 0 10px black;
-  text-shadow: 2px 2px 0 white;
+  text-shadow: 1px 1px 0 white;
 }
 
 a:hover,
 a:focus,
 a:active {
   color: white;
-  text-shadow: 2px 2px 0 black;
+  text-shadow: 1px 1px 0 black;
 }
 
 label {
