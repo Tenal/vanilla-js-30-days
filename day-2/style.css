@@ -49,44 +49,79 @@ img {
     margin: 0 auto;
 }
 
-/* HOME PAGE STYLES */
-body {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.308), rgba(2, 2, 2, 0.452)), url('https://i.ibb.co/p14cYdK/stars2-min.jpg');
-    background-size: cover;
-    background-position: center 25%;
-    background-repeat: no-repeat;
-    height: 100vh;
+/* SPECIFIC STYLES */
+html {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.74) 5%, rgba(255, 255, 255, 0.329) 100%), url('https://i.ibb.co/mCrMckR/time-min.jpg');
+  background-size: cover;
+  font-family: 'helvetica neue';
+  font-size: 10px;
+  min-height: 100vh;
 }
 
-header,
 main {
-    text-align: center;
-    padding-top: 50px;
-    color: white;
-}
-
-h1 {
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 3.5rem;
-}
-
-ul {
-    font-family: 'Space Mono', monospace;
-    font-size: 2.3rem;
-}
-
-li {
-    margin-bottom: 10px;
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  min-height: 85vh;
 }
 
 a {
-    padding: 5px;
-    transition: all 0.3s linear;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  background-color: black;
+  color: #BAAC9E;
+  padding: 10px;
+  transition: all 0.2s linear;
+  box-shadow: 0 0 10px black;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #688caa;
+  color: white;
+}
+
+.clock {
+  width: 40rem;
+  height: 40rem;
+  border: 20px solid #BAAC9E;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px  #BAAC9E,
+    inset 0 0 15px black,
+    0 0 15px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%; /* changes the point of rotation to far right of div instead of usual center of div */
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.4, 0.5, 1);
+}
+
+.second-hand {
+  height: 4px;
+}
+
+.no-transition {
+  transition: none;
 }
