@@ -19,28 +19,30 @@ a,
 button,
 form,
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
 img {
 	max-width: 100%;
-    height: auto;
-    display: block;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 650px;
 }
 
 .wrapper {
@@ -49,87 +51,71 @@ img {
     margin: 0 auto;
 }
 
-/* SPECIFIC STYLES */
-html {
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.74) 5%, rgba(255, 255, 255, 0.329) 100%), url('https://i.ibb.co/mCrMckR/time-min.jpg');
-  background-size: cover;
-  font-family: 'helvetica neue';
-  font-size: 10px;
+/* VARIABLES & ASSOCIATED DYNAMIC STYLES */
+:root {
+  --base: #ffc600;
+  --spacing: 0px;
+  --blur: 0px;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.hl {
+  color: var(--base);
+}
+
+a {
+  background-color: var(--base);
+}
+
+/* MISC STYLES */
+body {
+  background: linear-gradient(to bottom,  #699fc5,  #236391);
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
   min-height: 100vh;
 }
 
 main {
-  margin: 0;
-  font-size: 2rem;
-  display: flex;
-  flex: 1;
-  align-items: center;
   text-align: center;
-  min-height: 85vh;
+  padding-bottom: 20px;
+}
+
+h1 {
+  margin: 30px 0 20px;
+  font-size: 2.5rem;
 }
 
 a {
   text-transform: uppercase;
   font-size: 1.5rem;
-  background-color: black;
-  color: #BAAC9E;
-  padding: 10px;
+  color: #193549;
+  padding: 7px;
   transition: all 0.2s linear;
   box-shadow: 0 0 10px black;
+  text-shadow: 2px 2px 0 white;
 }
 
 a:hover,
 a:focus,
 a:active {
   color: white;
+  text-shadow: 2px 2px 0 black;
 }
 
-.clock {
-  width: 40rem;
-  height: 40rem;
-  border: 20px solid #BAAC9E;
-  border-radius: 50%;
-  margin: 50px auto;
-  position: relative;
-  padding: 2rem;
-  box-shadow:
-    0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px  #BAAC9E,
-    inset 0 0 15px black,
-    0 0 15px rgba(0,0,0,0.2);
+label {
+  font-size: 1.5rem;
+}
+.controls {
+  margin-bottom: 50px;
 }
 
-.clock-face {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-3px); /* account for the height of the clock hands */
-}
-
-.hand {
-  width: 50%;
-  height: 6px;
-  background: black;
-  position: absolute;
-  top: 50%;
-  transform-origin: 100%; /* changes the point of rotation to far right of div instead of usual center of div */
-  transform: rotate(90deg);
-  transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.1, 2.4, 0.5, 1);
-}
-
-.second-hand {
-  height: 4px;
-}
-
-.no-transition {
-  transition: none;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 480px) {
-  .clock {
-    width: 30rem;
-    height: 30rem;
-  }
+input {
+  width: 100px;
+  margin: 0 20px 0 10px;
 }
