@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 
 // resizing canvas to fit browser window
 canvas.width = ((window.innerWidth) - 33);
-canvas.height = ((window.innerHeight) - 75);
+canvas.height = ((window.innerHeight) - 80);
 
 // defining paint brush/stroke styles
 ctx.strokeStyle = '#BADA55';
