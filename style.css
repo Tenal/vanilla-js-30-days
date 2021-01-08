@@ -25,6 +25,7 @@ ul {
 
 html {
     font-size: 62.5%;
+    scrollbar-color: #8E5781 #000000c9;
 }
 
 ul {
@@ -55,6 +56,7 @@ body {
     background-size: cover;
     background-position: center 25%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -88,5 +90,12 @@ a {
 a:hover,
 a:focus,
 a:active {
-    color: #688caa;
+    color: #7ba0be;
+    text-shadow: 0 2px 2px black;
+}
+
+ul > li:nth-child(2n+2) a:hover,
+ul > li:nth-child(2n+2) a:focus,
+ul > li:nth-child(2n+2) a:active {
+    color: #c585b6;
 }
