@@ -1,7 +1,6 @@
 const speechBubble = document.querySelector('p');
 //array for keys
 const pressed = [];
-const pressedKonami = [];
 const secretCode = 'tenal';
 
 
