@@ -48,10 +48,17 @@ function populateList(plates = [], platesList) {
 
 // 
 function toggleDone(e) {
-    if (!e.target.matches('input')) return; // skip this unless it's an input
+    // skip this unless the target is an input
+    if (!e.target.matches('input')) return; 
+    
+    // store the elements & its index
     const el = e.target;
     const index = el.dataset.index;
+
+    // set the item's 'done' property to it's opposite (to allow a toggle of check/unchecked)
     items[index].done = !items[index].done;
+
+    // call the function that creates a list item for each item && set the items array into local storage (stored as a string!)
     localStorage.setItem('items', JSON.stringify(items));
     populateList(items, itemsList);
 }
@@ -59,6 +66,6 @@ function toggleDone(e) {
 
 // event listeners
 addItems.addEventListener('submit', addItem);
-itemsList.addEventListener('click', toggleDone);
+itemsList.addEventListener('click', toggleDone); // using event delegation here, we're attaching an event listener to a parent element & asking it to pass it down to any current & future children
 
 populateList(items, itemsList);
