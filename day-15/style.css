@@ -49,12 +49,13 @@ img {
 }
 
 /* SPECIFIC STYLES */
-html {
+body {
   box-sizing: border-box;
   background: url("oh-la-la.jpeg") center no-repeat;
   background-size: cover;
   min-height: 100vh;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  padding-bottom: 20px;
 }
 
 main {
@@ -63,7 +64,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 90vh;
+  min-height: 85vh;
 }
 
 *,
