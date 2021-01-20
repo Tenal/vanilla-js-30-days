@@ -19,6 +19,7 @@ recognition.addEventListener('result', e => {
         .join('');
 
     // take the transcript (now a string) and display it in the browser, ensuring that each time the user 'starts' speaking again after a pause, a new paragraph is started
+        // //isFinal is a property inside the speach object being returned
     p.textContent = transcript;
     if (e.results[0].isFinal) {
         p = document.createElement('p');
