@@ -80,23 +80,42 @@ h1 {
 
 ul {
     font-family: 'Space Mono', monospace;
-    font-size: 2.3rem;
+    font-size: 1.7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
 li {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.137);
+    box-shadow: 0 2px 2px black;
+    border: 2px solid #c585b6;
+    border-radius: 5px;
+    min-height: 150px;
+    width: 100%;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 a {
     padding: 5px;
     transition: all 0.3s linear;
+    text-shadow: 0 4px 4px black;
 }
 
 a:hover,
 a:focus,
 a:active {
     color: #7ba0be;
-    text-shadow: 0 2px 2px black;
+    text-shadow: 0 1px 1px black;
 }
 
 ul > li:nth-child(2n+2) a:hover,
